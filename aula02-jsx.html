@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula - FORMS JS</title>
+    </head>
+        <body>
+            <label for="">CAMPO 1:</label>
+            <input type="text" id="nome">
+            <label for="">CAMPO 2:</label>
+            <input type="number" id="idade">
+            <label for="">CAMPO 3:</label>
+            <input type="email" id="email">
+            <label for="">CAMPO 4:</label>
+            <input type="password" id="senha">
+
+            <button onclick="mostrarDados()">Clique aqui para enviar os dados para o console</button>
+
+            <div id="resultado1"></div>
+            <div id="resultado2"></div>
+            <div id="resultado3"></div>
+            <div id="resultado4"></div>
+
+        </body>
+
+        <script>
+            
+           
+            function mostrarDados(){
+
+                let areaTexto1 = document.getElementById("resultado1");
+                let areaTexto2 = document.getElementById("resultado2"); 
+                let areaTexto3 = document.getElementById("resultado3");
+                let areaTexto4 = document.getElementById("resultado4");
+
+                let nome  = document.getElementById("nome");
+                let idade = document.getElementById("idade");
+                let email = document.getElementById("email");
+                let senha = document.getElementById("senha");
+                console.log(nome);
+                console.log(idade);
+                console.log(email);
+                console.log(senha);
+
+                let info1 = nome.value;
+                let info2 = idade.value;
+                let info3 = email.value;
+                let info4 = senha.value;
+                //PEGAMOS O .value PARA VER O TEXTO
+                areaTexto1.innerHTML = "<h3>Você digitou no info1: " + info1 + "</h3>";
+                areaTexto2.innerHTML = "<p>Você digitou no info2: " + info2 + "</p>";
+                areaTexto3.innerHTML = "<p>Você digitou no info3: " + info3 + "</p>";
+                areaTexto4.innerHTML = "<p>Você digitou no info4: " + info4 + "</p>";
+            }
+
+        </script>
+</html>
