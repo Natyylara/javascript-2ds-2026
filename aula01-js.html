@@ -9,6 +9,7 @@
 
         <input type="text" id="teste">
         <button onclick="enviar()">Enviar</button>
+        <div id="resultado"></div>
 
 
     </body>
@@ -18,15 +19,6 @@
 
 
         <script>
-
-
-
-
-        
-
-
-
-
 
             let nome = "Tamsy";
             let idade = 23;
@@ -42,9 +34,13 @@
             document.write(trabalhando);
 
             let teste = document.getElementById("teste");
+            let areaTexto = document.getElementById("resultado");
 
             function enviar() {
-                document.write(teste);
+                let mensagem = testee.value;
+                //PEGAMOS O .value PARA VER O TEXTO
+                alert("Você digitou: " + mensagem);
+                areaTexto.innerHTML = "<h3>Você digitou: " + mensagem + "</h3>";
             }
 
 
